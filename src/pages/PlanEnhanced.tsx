@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { MapPin, Calendar, Users, ArrowRight, ArrowLeft, User, UserPlus, Heart, Mountain, Landmark, Utensils, Palette, Sparkles, Loader2 } from "lucide-react";
+import { MapPin, Calendar, Users, ArrowRight, ArrowLeft, User, UserPlus, Heart, Mountain, Landmark, Utensils, Palette, Sparkles, Loader as Loader2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import { supabase, POI } from "@/lib/supabase";

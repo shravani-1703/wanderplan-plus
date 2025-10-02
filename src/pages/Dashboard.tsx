@@ -5,21 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
-import {
-  MapPin,
-  Plus,
-  Users,
-  Shield,
-  Download,
-  Settings,
-  LogOut,
-  Calendar,
-  TrendingUp,
-  Bell,
-  Home,
-  ChevronLeft,
-  ChevronRight,
-} from 'lucide-react';
+import { MapPin, Plus, Users, Shield, Download, Settings, LogOut, Calendar, TrendingUp, Bell, Chrome as Home, ChevronLeft, ChevronRight } from 'lucide-react';
 import { supabase, Trip } from '@/lib/supabase';
 import { TripProgressVisualization } from '@/components/TripProgressVisualization';
 import { cn } from '@/lib/utils';
