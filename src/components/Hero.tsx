@@ -2,19 +2,12 @@ import { Button } from "@/components/ui/button";
 import { MapPin, Calendar, Users, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-travel.jpg";
 import { useNavigate } from "react-router-dom";
-
 export const Hero = () => {
   const navigate = useNavigate();
-
-  return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Travel destination"
-          className="w-full h-full object-cover"
-        />
+        <img src={heroImage} alt="Travel destination" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
       </div>
 
@@ -28,9 +21,7 @@ export const Hero = () => {
           
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
             Your Next Adventure
-            <span className="block gradient-hero bg-clip-text text-transparent mt-2">
-              Starts Here
-            </span>
+            
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
@@ -38,23 +29,11 @@ export const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
-            <Button 
-              variant="hero" 
-              size="xl"
-              onClick={() => navigate("/plan")}
-              className="min-w-[200px]"
-            >
+            <Button variant="hero" size="xl" onClick={() => navigate("/plan")} className="min-w-[200px]">
               <MapPin className="w-5 h-5" />
               Start Planning
             </Button>
-            <Button 
-              variant="outline" 
-              size="xl"
-              className="min-w-[200px] bg-card/80 backdrop-blur-sm"
-            >
-              <Calendar className="w-5 h-5" />
-              Explore Trips
-            </Button>
+            
           </div>
 
           {/* Quick Stats */}
@@ -81,6 +60,5 @@ export const Hero = () => {
           <div className="w-1 h-3 bg-primary rounded-full" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
