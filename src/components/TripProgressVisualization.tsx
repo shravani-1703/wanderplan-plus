@@ -145,21 +145,31 @@ export function TripProgressVisualization({ tripId, status }: TripProgressVisual
         </div>
 
         {showCelebration && (
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
             <div className="relative">
-              {[...Array(12)].map((_, i) => (
-                <Sparkles
-                  key={i}
-                  className="absolute text-yellow-400 animate-ping"
-                  style={{
-                    top: `${Math.random() * 60 - 30}px`,
-                    left: `${Math.random() * 60 - 30}px`,
-                    animationDelay: `${i * 0.1}s`,
-                    animationDuration: '1s',
-                  }}
-                />
-              ))}
-              <div className="text-4xl animate-bounce">🎉</div>
+              {[...Array(20)].map((_, i) => {
+                const angle = (i / 20) * 360;
+                const distance = 40 + Math.random() * 20;
+                const x = Math.cos((angle * Math.PI) / 180) * distance;
+                const y = Math.sin((angle * Math.PI) / 180) * distance;
+
+                return (
+                  <div
+                    key={i}
+                    className="absolute animate-firework"
+                    style={{
+                      left: '50%',
+                      top: '50%',
+                      animationDelay: `${i * 0.05}s`,
+                      '--tx': `${x}px`,
+                      '--ty': `${y}px`,
+                    } as React.CSSProperties}
+                  >
+                    {['🎉', '🎊', '✨', '⭐', '🌟'][i % 5]}
+                  </div>
+                );
+              })}
+              <div className="text-5xl animate-bounce z-10">🏆</div>
             </div>
           </div>
         )}

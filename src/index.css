@@ -128,4 +128,22 @@ All colors MUST be HSL.
   .shadow-xl-custom {
     box-shadow: var(--shadow-xl);
   }
+
+  @keyframes firework {
+    0% {
+      transform: translate(0, 0) scale(0);
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translate(var(--tx), var(--ty)) scale(1.5);
+      opacity: 0;
+    }
+  }
+
+  .animate-firework {
+    animation: firework 1.5s ease-out forwards;
+  }
 }
